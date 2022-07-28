@@ -1,0 +1,49 @@
+---
+version: 2
+
+# Plan setup
+plan:
+  project-key: SWEP
+  key: SWE
+  name: Docker_Bamboo_Pipeline
+
+variables:
+  buildKey: ${bamboo.buildKey}
+
+branches: 
+  delete:
+    after-deleted-days: never
+    after-inactive-days: never
+
+stages:
+  - setup:
+      jobs:
+        - docker-build
+
+docker-build:
+  tasks:
+    - script: 
+    #   - chmod +x ${bamboo.build.working.directory}/bamboo-nginx-latest/find.sh
+    #   - sh ${bamboo.build.working.directory}/bamboo-nginx-latest/find.sh ${bamboo.build.working.directory}/bamboo-nginx-latest
+    # # - script:
+    # #   - echo 'find ${bamboo.agentWorkingDirectory} -name Dockerfile' = ${pwd}
+    # #   - docker build -f ${pwd} .
+    # #   - docker run -d -p 80:8080 $IMAGENAME:$IMAGEVER nginx -g 'daemon off;'
+      
+    # # - script:
+    #   # - docker build -t bamboo-nginx-latest:1.0 /${bamboo.build.working.directory}/bamboo-nginx-latest/ 
+    #   # - docker run -d -p 80:8080 bamboo-nginx-latest:1.0 nginx -g 'daemon off;'
+    #   # description: build docker image 
+
+    # - script: 
+    #   - curl -LO https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64
+    #   - chmod +x container-structure-test-linux-amd64
+    #   - mv container-structure-test-linux-amd64 container-structure-test
+    #   # description: download container test
+
+    # - script:
+    #   - ./container-structure-test test --image bamboo-nginx:1.0 --config ./bamboo-nginx-latest/container-test.yaml 
+    #   # description: run test
+    
+    - script:
+      - echo XongRoiOngChauOi

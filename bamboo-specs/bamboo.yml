@@ -22,6 +22,8 @@ stages:
 
 docker-build:
   tasks:
+    - script:
+      - echo XongRoiOngChauOi
     # - script: 
     #   - chmod +x ${bamboo.build.working.directory}/bamboo-nginx-latest/find.sh
     #   - sh ${bamboo.build.working.directory}/bamboo-nginx-latest/find.sh ${bamboo.build.working.directory}/bamboo-nginx-latest
@@ -45,5 +47,4 @@ docker-build:
     #   - ./container-structure-test test --image bamboo-nginx:1.0 --config ./bamboo-nginx-latest/container-test.yaml 
     #   # description: run test
     
-    - script:
-      - echo XongRoiOngChauOi
+    

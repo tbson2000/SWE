@@ -22,7 +22,7 @@ stages:
 
 docker-build:
   tasks:
-    - script: 
+    # - script: 
     #   - chmod +x ${bamboo.build.working.directory}/bamboo-nginx-latest/find.sh
     #   - sh ${bamboo.build.working.directory}/bamboo-nginx-latest/find.sh ${bamboo.build.working.directory}/bamboo-nginx-latest
     # # - script:
